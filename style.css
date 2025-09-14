@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+body {
+  background: #ff617c;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+h1,
+h2 {
+  opacity: .7;
+}
+.logo {
+  margin-top: 2em;
+  width: 125px;
+}
+.top-txt {
+  font-family: "Story Script", sans-serif;
+  padding: 0 0 3em 0;
+}
+.home {
+  text-align: center;
+}
+.home-img {
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+  padding: 1.5em 0 0 0;
+}
+a {
+  color: #fff;
+  opacity: .9;
+  text-decoration: none;
+  border-bottom: 3px solid #fff;
+  
+}
+a:hover{
+  color: #8f3838;
+  cursor: pointer;
+}
