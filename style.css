@@ -6,22 +6,52 @@ img {
   max-width: 100%;
 }
 body {
-  background: #ff617c;
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px;
   color: #fff;
 }
-h1,
-h2 {
-  opacity: .7;
+.title {
+  padding: .5em 0 0;
+  z-index: 1;
+}
+.shiny-text {
+  text-align: center;
+  font-size: 5.5rem;
+  font-style: italic;
+  font-family: "Story Script", sans-serif;
+  font-weight: bold;
+  letter-spacing: .2em;
+  background: linear-gradient(120deg,
+      #eee 10%,
+      /* light */
+      #ccc 30%,
+      /* mid-tone */
+      #fff 45%,
+      /* highlight */
+      #aaa 55%,
+      /* mid-tone */
+      #fff 70%,
+      /* strong highlight */
+      #888 85%
+      /* dark */
+    );
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 .logo {
-  margin-top: 1em;
+  margin-top: 1.2em;
   width: 125px;
+  padding-bottom: 1.8em;
 }
 .top-txt {
   font-family: "Story Script", sans-serif;
-  padding: 2em 0 3em 0;
+  padding: 2em 0 0;
+  opacity: .7;
+}
+.navbar {
+  padding: 0 0 1em;
 }
 .home {
   text-align: center;
@@ -40,9 +70,57 @@ a {
   opacity: .9;
   text-decoration: none;
   border-bottom: 3px solid #fff;
-  
 }
 a:hover{
   color: #8f3838;
   cursor: pointer;
+}
+.img-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}.img-gallery img {
+  width: 90%;
+  height: auto;
+}
+.img-gallery img:last-child {
+  margin-bottom: 3em;
+}
+.footer {
+  background: #ffe1e1;
+  text-align: center;
+}
+.footer p {
+  color: black;
+  padding: .1em;
+}
+.gallery-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2em;
+  padding: .1em;
+}
+.accent {
+  position: absolute;
+  background: #f3a6b3;
+  text-align: center;
+  width: 160px;
+  height: 60px;
+  margin: 0 0 -40px -10px;
+  top: 200px;
+  border-radius: 10px;
+  opacity: .8;
+}
+.color-accent {
+  position: absolute;
+  background: #f3a6b3;
+  text-align: center;
+  width: 250px;
+  height: 60px;
+  margin: 0 0 0 -22px;
+  top: 2810px;
+  border-radius: 10px;
+  opacity: .8;
 }
