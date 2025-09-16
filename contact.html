@@ -14,7 +14,7 @@
     body {
   min-height: 100vh;
   margin: 0;
-  background: url('./wandas-pics/about-bg.jpg') no-repeat center center fixed;
+  background: url('./wandas-pics/contact-bg.jpg') no-repeat center center fixed;
   background-size: cover;
 }
   </style>
@@ -22,17 +22,24 @@
 </head>
 <body>
   <div class="wrapper">
-    <nav class="navbar home about-nav">
+     <h1 class="contact-title shiny-text">Contact</h1>
+    <nav class="navbar home contact-nav">
             <ul>
-              <li><a href="./contact.html">Contact</a></li>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./gallery.html">Gallery</a></li>
-              
+              <li><a href="./about.html">About</a></li>
             </ul>
           </nav>
-    <div class="about-content">
-      <h1 class="about-title shiny-text">About Wanda,</h1>
-      <p class="about-text shiny-text">Trained at the Sassoon Academy of Cosmotology. With 20 years of experience as a Stylist & Color Specialist</p>
+    <div class="contact-content">
+      <form method="post" class="contact-form">
+        <label for="name" class="label-txt">Name</label>
+        <input type="text" placeholder="Name">
+        <label for="phone" class="label-txt">Phone number</label>
+        <input type="phone" placeholder="Phone number">
+        <label for="email" class="label-txt">Email</label>
+        <input type="email" placeholder="Email">
+        <button>Submit</button>
+      </form>
     </div>
   </div>
    <footer>
