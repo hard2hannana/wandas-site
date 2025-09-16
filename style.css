@@ -61,9 +61,12 @@ body {
   padding: 4.5em 0 2em;
 }
 .home-img {
-  width: 90%;
+  width: 100%;
   border-radius: 10px;
   margin: 0 auto;
+}
+.wrapper {
+  min-height: 96.4vh;
 }
 ul {
   list-style: none;
@@ -98,7 +101,7 @@ a:hover{
   margin-bottom: 3em;
 }
 .about-content {
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -114,7 +117,6 @@ a:hover{
 }
 .about-title,
 .about-text {
- 
  font-family: 'Oleo Script Swash Caps', cursive;
 }
 .footer {
