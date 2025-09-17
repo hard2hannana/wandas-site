@@ -55,7 +55,7 @@ body {
 }
 .gallery-hdr {
   font-family: "Italiana", sans-serif;
-  font-size: 5rem;
+  font-size: 4.5rem;
   opacity: .8;
   padding: 1em 0 0;
 }
@@ -63,10 +63,10 @@ body {
   text-align: center;
 }
 .about-nav {
-  padding: 4.5em 0 2em;
+  padding: 1em 0 2em;
 }
 .contact-nav {
-  padding: 1.5em 0;
+  padding: .5em 0;
 }
 .home-img {
   width: 100%;
@@ -78,7 +78,7 @@ body {
 }
 ul {
   list-style: none;
-  padding: 1.5em 0 0 0;
+  padding: .5em 0 0 0;
 }
 ul li {
   margin-bottom: .4em;
@@ -100,13 +100,18 @@ a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3em;
-}.img-gallery img {
+  gap: 2.5em;
+}
+.img-gallery img {
   width: 90%;
   height: auto;
 }
 .img-gallery img:last-child {
-  margin-bottom: 3em;
+  margin-bottom: 2.5em;
+}
+img.gallery-accents {
+  display: inline-block;
+ margin: 0;
 }
 .about-content {
   display: flex;
@@ -164,7 +169,7 @@ input {
 }
 button {
   font-size: 1.2em;
-  margin-top: 1em;
+  margin-top: .5em;
   padding: .5em 0;
   color: #ccc;
   border: 0;
