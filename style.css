@@ -139,8 +139,12 @@ img.gallery-accents {
   margin: 0 auto;
 }
 .contact-title {
-  padding: 5rem 0 0 0;
+  padding: 2rem 0 1rem 0;
   font-size: 3rem;
+}
+.contact-text {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 .label-txt {
   font-family: "Story Script", sans-serif;
@@ -191,4 +195,84 @@ button {
   width: 100%;
   margin-top: 2em;
   padding: .1em;
+}
+.home {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .navbar ul{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+  }
+  .navbar li {
+    font-size: 2rem;
+    margin: 0 1em;
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-image: url(./wandas-pics/home-bg.webp);
+    background-size: cover;
+    border: 45px solid #fff;
+    gap: 2em;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  .top-txt {
+    padding-bottom: 2em;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 1;
+  }
+  .home-img{
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .picture-frame {
+    background-color: #ddc;
+    border: solid 5vmin #eee;
+    border-bottom-color: #fff;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5vh 5vw;
+    padding: 2vmin;
+    position: relative;
+    text-align: center;
+  
+    &:before {
+      border-radius: 2px;
+      bottom: -2vmin;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25) inset;
+      content: "";
+      left: -2vmin;
+      position: absolute;
+      right: -2vmin;
+      top: -2vmin;
+    }
+  
+    &:after {
+      border-radius: 2px;
+      bottom: -2.5vmin;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+      content: "";
+      left: -2.5vmin;
+      position: absolute;
+      right: -2.5vmin;
+      top: -2.5vmin;
+    }
+  }
 }
