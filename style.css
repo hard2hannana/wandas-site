@@ -7,11 +7,14 @@ img {
   max-width: 100%;
 }
 body {
+  background: #eee;
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Merriweather Sans", sans-serif, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
   font-size: 24px;
   color: #fff;
 }
+
 .title {
   padding: .5em 1em 0;
 }
@@ -45,9 +48,18 @@ body {
   width: 125px;
   padding-bottom: 1.8em;
 }
+.logo-container {
+  background-image:
+      linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+      url(./wandas-pics/blue-background.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  text-align: center;
+}
 .top-txt {
   font-family: "Story Script", sans-serif;
-  padding: 2em 0 0;
+  padding: 2em 0;
   opacity: .7;
 }
 .navbar {
@@ -60,7 +72,15 @@ body {
   padding: 1em 0 0;
 }
 .home {
+  background-image:
+      linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+      url(./wandas-pics/blue-background.jpg);
+      background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        min-height: 100vh;
   text-align: center;
+  padding-bottom: 3em;
 }
 .about-nav {
   padding: 1em 0 2em;
@@ -88,7 +108,6 @@ ul li:last-child {
 }
 a {
   color: #fff;
-  opacity: .9;
   text-decoration: none;
   border-bottom: 3px solid #fff;
 }
@@ -114,22 +133,32 @@ img.gallery-accents {
  margin: 0;
 }
 .about-content {
+  background: #eee;
+  color: #333;
+  font-family: "Story Script", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
   text-align: center;
+  
+}
+.about-img {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 50%;  
+  padding-bottom: 1em;
 }
 .about-title {
   font-size: 3rem;
+  padding-top: 1em;
   margin-bottom: .5em;
 }
 .about-text {
-  font-size: 2rem;
-}
-.about-title,
-.about-text {
- font-family: 'Oleo Script Swash Caps', cursive;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  font-size: 2.5rem;
+  padding-bottom: 1em;
 }
 .contact-form {
   display: flex;
@@ -182,7 +211,7 @@ button {
   box-shadow: 4px 2px 2px rgba(116, 116, 116, 0.9);
 }
 .footer {
-  background: #ffe1e1;
+  background: #fff;
   text-align: center;
 }
 .footer p {
@@ -196,31 +225,29 @@ button {
   margin-top: 2em;
   padding: .1em;
 }
-.home {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-}
+
 @media (min-width: 768px) {
   .navbar ul{
     display: flex;
     justify-content: center;
-    margin: 2em 0;
+    margin: 0;
   }
   .navbar li {
     font-size: 2rem;
+    padding: 2em 0;
     margin: 0 1em;
   }
   .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background-image: url(./wandas-pics/home-bg.webp);
+    background-image: url(./wandas-pics/home_bg.jpg);
     background-size: cover;
-    border: 45px solid #fff;
+    border: 35px solid #fff;
     gap: 2em;
     margin: 0 auto;
     max-width: 1400px;
+    width: 85%;
   }
   .top-txt {
     padding-bottom: 2em;
@@ -228,23 +255,25 @@ button {
     color: #fff;
     opacity: 1;
   }
-  .home-img{
-    border: solid 2px;
-    border-bottom-color: #ffe;
-    border-left-color: #eed;
-    border-right-color: #eed;
-    border-top-color: #ccb;
+  
+  .home-img {
+    /* border: solid 2px;
+    border-bottom-color: #0d0549;
+    border-left-color: #0d0549;
+    border-right-color: #0d0549;
+    border-top-color: #0d0549; */
     max-height: 100%;
     max-width: 100%;
   }
   .picture-frame {
-    background-color: #ddc;
-    border: solid 5vmin #eee;
-    border-bottom-color: #fff;
-    border-left-color: #eee;
-    border-radius: 2px;
-    border-right-color: #eee;
-    border-top-color: #ddd;
+    background-color: #2b2d46;
+    background-color: rgba(71, 94, 95, 0.755);
+      border: solid 5vmin #eee;
+      border-bottom-color: #fff;
+      border-left-color: #eee;
+      border-radius: 2px;
+      border-right-color: #eee;
+      border-top-color: #ddd;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
     box-sizing: border-box;
     display: inline-block;
@@ -274,5 +303,26 @@ button {
       right: -2.5vmin;
       top: -2.5vmin;
     }
+  } 
+  .about-content {
+    text-align: start;
+    width: 80%;
+    margin: 2em auto;
+  } 
+    .about-content::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  .about-img {
+    float: right;
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 100%;
+    shape-outside: circle(50%);
+    
+  
   }
+  
 }
