@@ -43,18 +43,18 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
 }
+.blue-text {
+  background: linear-gradient(90deg, #415b8c, #8aa6d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .logo {
   margin-top: 1.2em;
   width: 125px;
   padding-bottom: 1.8em;
 }
 .logo-container {
-  background-image:
-      linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-      url(./wandas-pics/blue-background.jpg);
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
+  background: linear-gradient(90deg, #415b8c, #476395);
   text-align: center;
 }
 .top-txt {
@@ -143,8 +143,8 @@ img.gallery-accents {
   
 }
 .about-img {
-  width: 90%;
-  margin: 0 auto;
+  /* width: 90%;
+  margin: 0 auto; */
   border-radius: 50%;  
   padding-bottom: 1em;
 }
@@ -210,13 +210,20 @@ button {
   background: linear-gradient(45deg, #333, #666);
   box-shadow: 4px 2px 2px rgba(116, 116, 116, 0.9);
 }
+.footer-format {
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
 .footer {
   background: #fff;
-  text-align: center;
+  
+  padding: 2em;
 }
-.footer p {
-  color: black;
-  padding: .1em;
+.footer p,
+.footer a,
+.footer h2 {
+  font-size: 1.5rem;
 }
 .gallery-footer {
   position: fixed;
@@ -304,9 +311,12 @@ button {
       top: -2.5vmin;
     }
   } 
+  
   .about-content {
+    border: 35px solid #415b8c;
     text-align: start;
-    width: 80%;
+    width: 85%;
+    padding: 0 3em;
     margin: 2em auto;
   } 
     .about-content::after {
