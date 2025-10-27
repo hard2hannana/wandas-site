@@ -23,8 +23,6 @@ body {
   font-size: 5.5rem;
   font-style: italic;
   font-family: "Story Script", sans-serif;
-  font-weight: bold;
-  letter-spacing: .2em;
   background: linear-gradient(120deg,
       #eee 10%,
       /* light */
@@ -48,37 +46,47 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.logo {
-  margin-top: 1.2em;
-  width: 125px;
-  padding-bottom: 1.8em;
-}
+
+
 .logo-container {
-  background: linear-gradient(90deg, #415b8c, #476395);
+  padding: 1em 0;
   text-align: center;
+  background-image: url(./wandas-pics/blue-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.grid-wrapper{
+  width: 90%;
+  margin: 0 auto;
 }
 .top-txt {
   font-family: "Story Script", sans-serif;
   padding: 2em 0;
   opacity: .7;
 }
-.navbar {
-  padding: 0 0 1em;
-}
+
 .gallery-hdr {
   font-family: "Italiana", sans-serif;
   font-size: 4.5rem;
   opacity: .8;
   padding: 1em 0 0;
 }
+.title {
+  font-family: "Story Script", sans-serif;
+  font-size: 3rem;
+  padding: .5em 0;
+  margin: 0;
+
+}
 .home {
   background-image:
-      linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-      url(./wandas-pics/blue-background.jpg);
-      background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
-        min-height: 100vh;
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url(./wandas-pics/blue-background.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  min-height: 100vh;
   text-align: center;
   padding-bottom: 3em;
 }
@@ -106,7 +114,7 @@ ul li {
 ul li:last-child {
   margin-bottom: 0;
 }
-a {
+.navbar a {
   color: #fff;
   text-decoration: none;
   border-bottom: 3px solid #fff;
@@ -140,16 +148,15 @@ img.gallery-accents {
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
-  
 }
 .about-img {
-  /* width: 90%;
-  margin: 0 auto; */
-  border-radius: 50%;  
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 100%;  
   padding-bottom: 1em;
 }
 .about-title {
-  font-size: 3rem;
+  font-size: 2rem;
   padding-top: 1em;
   margin-bottom: .5em;
 }
@@ -157,7 +164,7 @@ img.gallery-accents {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 1em;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding-bottom: 1em;
 }
 .contact-form {
@@ -212,27 +219,27 @@ button {
 }
 .footer-format {
   display: flex;
-  justify-content: space-around;
-  align-items: center
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .footer {
-  background: #fff;
-  
-  padding: 2em;
+  background: #111;
 }
 .footer p,
 .footer a,
 .footer h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: .5em;
 }
-.gallery-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin-top: 2em;
-  padding: .1em;
+.footer h2:last-child{
+  margin-bottom: 1em;
 }
-
+.footer a {
+  color: #eee;
+  text-decoration: none;
+}
 @media (min-width: 768px) {
   .navbar ul{
     display: flex;
@@ -241,7 +248,7 @@ button {
   }
   .navbar li {
     font-size: 2rem;
-    padding: 2em 0;
+    padding: 2em 0 0;
     margin: 0 1em;
   }
   .grid-wrapper {
@@ -262,7 +269,18 @@ button {
     color: #fff;
     opacity: 1;
   }
-  
+  .title {
+    font-size: 5rem;
+  }
+  .about-title{
+    font-size: 3rem;
+  }
+  .about-text {
+    font-size: 2.5rem;
+  }
+  .shiny-text {
+    letter-spacing: .2em;
+  }
   .home-img {
     /* border: solid 2px;
     border-bottom-color: #0d0549;
@@ -311,28 +329,52 @@ button {
       top: -2.5vmin;
     }
   } 
-  
   .about-content {
-    border: 35px solid #415b8c;
     text-align: start;
     width: 85%;
     padding: 0 3em;
     margin: 2em auto;
   } 
-    .about-content::after {
-      content: "";
-      display: block;
-      clear: both;
-    }
+  .about-content::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
   .about-img {
     float: right;
     width: 250px;
-    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 100%;
-    shape-outside: circle(50%);
-    
-  
+    shape-outside: circle(100%);
   }
+    .bottom-txt {
+      font-family: "Story Script", sans-serif;
+      text-align: center;
+      font-size: 3rem;
+      color: #fff;
+      opacity: .8;
+      margin: 1rem 0 2rem;
+      transform: translateX(-50px);
+    }
   
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 2rem;
+    }
+    .logo {
+      height: 2em;
+      vertical-align: middle;
+      transform: translateY(20px);
+    }
+    .footer-format {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+      padding: 1.5em;
+      text-align: start;
+      width: 80%;
+      margin: 0 auto;
+    }
 }
