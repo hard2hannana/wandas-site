@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Story+Script&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Story+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-    background: 
-      linear-gradient(160deg,
-        #181818 0%,
-        #222 35%,
-        #000 100%);
-    }
+    body { background: linear-gradient(160deg,#181818 0%,#222 35%,#000 100%); }
   </style>
 </head>
 <body>
-  <h1 class="gallery-hdr home">Visual Portfolio</h1>
-  <nav class="navbar home">
-          <ul>
-            <li><a href="./about.html">About</a></a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./index.html">Home</a></li>
-          </ul>
-       
+  <nav class="navbar">
+    <ul>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./index.html">Home</a></li>
+    </ul>
+  </nav>
+
   <div class="img-gallery">
-    <div class="gallery-accent">
-      <h2 class="shiny-text title">Cut</h2>
-      <img src="./wandas-pics/gold-scissors.png" alt="gold scissors" style="width: 75px; margin: 0;" class="gallery-accent">
-    </div>
-    <img src="./wandas-pics/wanda1-editedcopy.png" alt="hairstyle image">
-    <img src="./wandas-pics/wanda2-editedcopy.png" alt="hairstyle image">
-    <img src="./wandas-pics/wanda3-editedcopy.png" alt="hairstyle image">
-    <img src="./wandas-pics/cut4.jpg" alt="hairstyle image">
-    <div class="gallery-accent">
-      <h2 class="shiny-text title">Color</h2>
-      <img src="./wandas-pics/pallet.png" alt="paint pallet" style="width: 90px; margin: 0;" class="gallery-accent">
-    </div>
-    <img src="./wandas-pics/color1.jpg" alt="hairstyle image">
-    <img src="./wandas-pics/color2.jpg" alt="hairstyle image">
-    <img src="./wandas-pics/color3.jpg" alt="hairstyle image">
-    <img src="./wandas-pics/color4.jpg" alt="hairstyle image">
-  </div>
+    <h1 class="gallery-hdr">Visual Portfolio</h1>
+    <div class="gallery"></div>
+  </div>  
   <footer>
-      <div class="footer"><p>2025</p></div>
+      <div class="footer">
+        <div class="footer-format">
+          <div class="contact">
+            <h2>Contact</h2>
+            <h2>☎ - 123-456-7890</h2>
+            <h2>✉ - wanda@hairbywanda.com</h2>
+          </div>
+          <div class="site-map">
+            <h2>Site Map</h2>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./gallery.html">Gallery</a></li>
+              <li><a href=".about">About</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+           <p class="blue-text">created © 2025</p>
+        </div>
+      </div>
    </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
 </html>
