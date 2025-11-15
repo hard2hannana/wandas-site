@@ -142,6 +142,12 @@ a:hover{
   aspect-ratio: 2/3;
   border-radius: 8px;
   object-fit: cover;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.gallery img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 .about-content {
   background: #eee;
