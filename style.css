@@ -109,6 +109,8 @@ ul li:last-child {
 }
 .navbar {
   background: #111;
+  text-align: center;
+  padding: 1em 0;
 }
 .navbar a {
   font-style: italic;
@@ -145,7 +147,7 @@ a:hover{
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .gallery img:hover {
-  transform: scale(1.15);
+  transform: scale(1.10);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
