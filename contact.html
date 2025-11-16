@@ -19,8 +19,15 @@
   width: 100vw;
   position: relative;
   top: 0; left: 0;
-  background-image: url(./wandas-pics/Paper-Textures-7.jpg);
-  color: #000;
+  background: linear-gradient(
+  135deg,
+  #5260d7 0%,
+  #6c6e90  25%,
+  #7c91d1 40%,
+  #6c6e90 60%,
+  #5260d7 100%
+  );
+  color: #333;
   z-index: 100;
   overflow-y: auto; /* allows scroll INSIDE the form if needed */
   box-sizing: border-box;
@@ -36,11 +43,12 @@
 <body>
   <div class="wrapper">
      <h1 class="contact-title">Contact</h1>
-     <h2 class="contact-text">&#128222; 123-456-7890</h2>
+     <h2 class="contact-phone">☎ - 123-456-7890</h2>
+     <h2 class="contact-email">✉ - wanda@wandahurley.com</h2>
     <div class="contact-content">
       <button class="close-contact" id="close-contact">&times;</button>
       <form action="https://formspree.io/f/mzzykrag?next=https://yoursite.com/thankyou.html" 
-            method="post" class="contact-form" id="contact-form">
+            method="post" class="contact-form" id="contact-form" autocomplete="off">
         <label for="name" class="label-txt">Name</label>
         <input type="text" name="name">
         <label for="phone" class="label-txt">Phone number</label>
