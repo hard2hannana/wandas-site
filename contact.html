@@ -8,43 +8,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css ">
   <style>
-    html {
+ html, body {
   height: 100%;
-}
-    body {
-  min-height: 100vh;
   margin: 0;
-  background: url('./wandas-pics/contact-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
+  padding: 0;
+  overflow: hidden; /* No scrollbars */
 }
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0; left: 0;
+  background-image: url(./wandas-pics/Paper-Textures-7.jpg);
+  color: #000;
+  z-index: 100;
+  overflow-y: auto; /* allows scroll INSIDE the form if needed */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
   </style>
   <title>Document</title>
 </head>
 <body>
   <div class="wrapper">
-    <nav class="navbar home contact-nav">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./about.html">About</a></li>
-      </ul>
-    </nav>
-     <h1 class="contact-title shiny-text">Contact</h1>
-     <h2 class="contact-text shiny-text">&#128222; 123-456-7890</h2>
+     <h1 class="contact-title">Contact</h1>
+     <h2 class="contact-text">&#128222; 123-456-7890</h2>
     <div class="contact-content">
-      <form method="post" class="contact-form">
+      <button class="close-contact" id="close-contact">&times;</button>
+      <form action="https://formspree.io/f/mzzykrag?next=https://yoursite.com/thankyou.html" 
+            method="post" class="contact-form" id="contact-form">
         <label for="name" class="label-txt">Name</label>
-        <input type="text" placeholder="Name">
+        <input type="text" name="name">
         <label for="phone" class="label-txt">Phone number</label>
-        <input type="phone" placeholder="Phone number">
+        <input type="phone" name="phone" >
         <label for="email" class="label-txt">Email</label>
-        <input type="email" placeholder="Email">
+        <input type="email" name="email" >
         <button>Submit</button>
       </form>
     </div>
   </div>
-   <footer>
-        <div class="footer"><p>2025</p></div>
-     </footer>
+  <script>
+document.getElementById('close-contact').addEventListener('click', function(e) {
+  e.preventDefault();
+  if (window.history.length > 1) {
+    window.history.back();
+  } else {
+    window.location.href = 'gallery.html'; // or your actual homepage
+  }
+});
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+});
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // Stop the browser's normal submit
+  fetch('https://formspree.io/f/mzzykrag', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      window.location.replace('thank-you.html'); // Redirect after success
+    } else {
+      alert('Something went wrong.');
+    }
+  });
+});
+
+</script>
+
 </body>
 </html>

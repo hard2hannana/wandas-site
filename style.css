@@ -94,9 +94,6 @@ body {
   border-radius: 10px;
   margin: 0 auto;
 }
-.wrapper {
-  min-height: 96.4vh;
-}
 ul {
   list-style: none;
   padding: .5em 0 0 0;
@@ -186,12 +183,31 @@ a:hover{
   font-size: 1.5rem;
   padding-bottom: 1em;
 }
+
+/* Close button */
+#close-contact {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Make form fill more elegantly on mobile */
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
+  max-width: 380px;
+}
+
+.contact-form input,
+.contact-form button {
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  padding: 12px;
 }
 .contact-title {
   padding: 2rem 0 1rem 0;
@@ -199,7 +215,7 @@ a:hover{
 }
 .contact-text {
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 4em;
 }
 .label-txt {
   font-family: "Story Script", sans-serif;
@@ -207,34 +223,22 @@ a:hover{
   margin: 0;
 }
 input {
-  background: linear-gradient(120deg,
-        #eee 10%,
-        /* light */
-        #ccc 30%,
-        /* mid-tone */
-        #fff 45%,
-        /* highlight */
-        #aaa 55%,
-        /* mid-tone */
-        #fff 70%,
-        /* strong highlight */
-        #888 85%
-        /* dark */
-  );
+  background: transparent;
   color: #333;
   font-size: 1.1rem;
   height: 2rem;
   border: 0;
+  border-bottom: 2px solid #333;
 }
 button {
-  font-size: 1.2em;
+  background: transparent;
+  font-size: 6rem;
   margin-top: .5em;
   padding: .5em 0;
-  color: #ccc;
+  color: #333;
   border: 0;
-  border-radius: 12px;
-  background: linear-gradient(45deg, #333, #666);
-  box-shadow: 4px 2px 2px rgba(116, 116, 116, 0.9);
+ 
+  
 }
 .footer-format {
   display: flex;
