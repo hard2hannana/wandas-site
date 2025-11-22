@@ -18,7 +18,6 @@
   min-height: 100vh;
   width: 100vw;
   position: relative;
-  top: 0; left: 0;
   background: linear-gradient(
   135deg,
   #5260d7 0%,
@@ -27,7 +26,7 @@
   #6c6e90 60%,
   #5260d7 100%
   );
-  color: #333;
+  color: #333333d7;
   z-index: 100;
   overflow-y: auto; /* allows scroll INSIDE the form if needed */
   box-sizing: border-box;
@@ -36,7 +35,26 @@
   justify-content: center;
   align-items: center;
 }
-
+@media (min-width: 768px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background: url("./wandas-pics/about-bg.webp") no-repeat center;
+    background-size: 100% auto;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+  }
+  .wrapper {
+    width: 40%;
+    min-height: 50%;
+    border-radius: 25px;
+    margin: 0 auto;
+    
+  }
+}
   </style>
   <title>Document</title>
 </head>

@@ -392,7 +392,22 @@ button {
       margin: 1rem 0 2rem;
       transform: translateX(-50px);
     }
-  
+    .label-txt {
+      padding: 2px 0;
+    }
+    .contact-title,
+    .contact-form button {
+      font-size: 1.5rem;
+    }
+    .contact-phone,
+    .contact-form input,
+    .label-txt {
+      font-size: 1rem;
+    }
+    .contact-email {
+      font-size: 1rem;
+      padding-bottom: 1em;
+    }
     .logo-wrap {
       display: inline-flex;
       align-items: center;
