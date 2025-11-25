@@ -429,3 +429,11 @@ button {
       margin: 0 auto;
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+ .top-txt {
+  font-size: 3rem;
+ }
+}
